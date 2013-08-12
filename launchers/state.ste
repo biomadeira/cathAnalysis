@@ -1,0 +1,12 @@
+#This file contains the states in order. The name must be equal to the name given to the 
+#corresponding script
+
+getDomainsFromSP true
+
+runMmult False
+
+
+
+
+
+

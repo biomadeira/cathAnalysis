@@ -1,0 +1,22 @@
+# this file defines the parameters for all the scripts contained in the package sflexfit , the cfg and the ste files
+# note that the name of the parameters must be the same of the parameters accepted by the scripts 
+
+#Parameters section
+cathcode         str   empty
+tar              bool  False         
+verbose          bool  True        
+DBServer         str   localhost 
+user       	     str   sflexfit  
+passwd     		 str   sflexfit  
+db               str   sflexfit  
+workingDirectory str   /home/jatienza/Desktop/cathAnalysis/eclipseProject/cathAnalysis/src/launchers/kk       
+
+#cfg and ste section
+cfg              str   /home/jatienza/Desktop/cathAnalysis/eclipseProject/cathAnalysis/src/launchers/localhost.cfg
+ste              str   /home/jatienza/Desktop/cathAnalysis/eclipseProject/cathAnalysis/src/launchers/state.ste
+
+#scripts section The name of the script will be the name of the scripts' states.
+getDomainsFromSP scp  /home/jatienza/Desktop/cathAnalysis/eclipseProject/cathAnalysis/src/apps/getDomainsFromSP.py  cathcode --tar --workingDirectory --verbose  --DBServer --user --passwd --db
+runMmult         cmd  mmult cathcode + ".mmult"
+
+
